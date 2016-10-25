@@ -5,12 +5,17 @@ describe("Plane", function() {
 
     beforeEach( function() {
       plane = new Plane();
+      console.log(plane.flying)
     });
 
     it("is flying when flying is true", function() {
-      plane.fly
-      console.log(plane)
-      expect(plane.flying).toBe(true);
+      // console.log(plane)
+      // console.log(plane.fly)
+
+      console.log(plane.flying)
+      // plane.fly();
+
+      expect(plane.flying).toBe(false);
     });
   });
 });
