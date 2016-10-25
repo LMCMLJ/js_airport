@@ -8,4 +8,3 @@ Airport.prototype.land = function(plane) {
 };
 
 var airport = new Airport();
-console.log(airport);
