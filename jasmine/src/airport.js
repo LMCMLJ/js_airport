@@ -1,10 +1,10 @@
 function Airport() {
-  var runway = [];
+  this.runway = [];
 }
 
 
 Airport.prototype.land = function(plane) {
-  runway.push('plane');
+  this.runway.push(plane);
 };
 
 var airport = new Airport();
