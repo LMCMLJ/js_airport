@@ -3,23 +3,25 @@ describe("Aiport", function() {
   var plane;
 
   beforeEach(function() {
-    var airport = new Airport();
-    var plane = new Plane();
-
+    airport = new Airport();
+    plane = new Plane();
   });
 
-  spyOn(plane, "isFlying").and.returnValue(true);
+
   describe("#land", function() {
-    it("lands a plane", function() {
-      expect(plane.isFlying).toBe(true);
-      expect(airport.runway).not.toBe([]);
+    it("adds a plane to the hangar array", function() {
+      airport.land(plane);
+      console.log(airport.runway);
+      expect(airport.runway).toContain(plane);
     });
   });
+
   describe("#takeoff", function() {
-    it("sends a plane for takeoff", function(){
-
-      expect(airport.runway).toBe([]);
-
+    it("sends a plane for takeoff", function() {
+      airport.land(plane);
+      console.log(airport.runway)
+      airport.takeOff(plane);
+      expect(airport.runway).not.toContain(plane);
     });
   });
 });

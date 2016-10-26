@@ -1,5 +1,5 @@
 function Plane() {
-    this.flying = false;
+  this.flying = false;
 }
 
 Plane.prototype.isFlying = function() {
